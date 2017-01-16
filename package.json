@@ -299,7 +299,8 @@
     "npm": ">= 1.4.x"
   },
   "scripts": {
-    "test": "make test"
+    "test": "make test && make clean",
+    "preversion": "make test && make mocha.js && git add mocha.js"
   },
   "dependencies": {
     "browser-stdout": "1.3.0",
